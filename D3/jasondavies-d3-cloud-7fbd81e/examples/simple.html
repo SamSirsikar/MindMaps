@@ -1,0 +1,30 @@
+<script src="../lib/d3/d3.js"></script> 
+<script src="../d3.layout.cloud.js"></script>
+ <body> 
+<script> 
+  d3.layout.cloud().size([300, 300])
+.words(["Diagram","Words","Idea","Spider diagram","Radial tree","Brainstorming","Visual thinking","Problem solving","Porphyry of Tyros","Aristotle","Ramon Llull","Semantic network","Allan M. Collins","M. Ross Quillian (page does not exist)","United Kingdom","Popular psychology","Tony Buzan","BBC","Alfred Korzybski","General semantics","Robert A. Heinlein","A.E. van Vogt","Cerebral hemispheres","Concept map","Generation","Creative visualization","Structure","Taxonomic classification","Study skills","Organization","Problem solving","Decision making","Education","Business","Notetaking","Mnemonic technique","Expert system","Search engine","Information retrieval","Spider diagram","List of mind mapping software","United States","Canadian Intellectual Property Office","Edward C. Tolman",].map(function(d) {
+        return {text: d, size: 10 + Math.random() * 90};
+      }))
+      .rotate(function() { return ~~(Math.random() * 2) * 90; })
+      .fontSize(function(d) { return d.size; })
+      .on("end", draw)
+      .start();
+
+  function draw(words) {
+    d3.select("body").append("svg")
+        .attr("width", 300)
+        .attr("height", 300)
+      .append("g")
+        .attr("transform", "translate(150,150)")
+      .selectAll("text")
+        .data(words)
+      .enter().append("text")
+        .style("font-size", function(d) { return d.size + "px"; })
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+        .text(function(d) { return d.text; });
+  }
+</script>

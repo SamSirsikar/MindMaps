@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>Database normalization - Wikipedia, the free encyclopedia</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.21wmf3" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Database_normalization&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Database_normalization&amp;action=edit" />
+<link rel="apple-touch-icon" href="//en.wikipedia.org/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:d11e4771671c2d6cdedf7c90d8131cd5 */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Database_normalization","wgTitle":"Database normalization","wgCurRevisionId":523841318,"wgArticleId":8640,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Database normalization","Database management systems","Data modeling","Database constraints","Relational algebra"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Database_normalization","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":true,"expandablesearch":false,"footercleanup":true,"sectioneditlinks":false,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgTrackingToken":"32991eaca1ba53addd9fbe7aa51ad16e","wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false},"wgVisualEditor":{"isPageWatched":false},"wikilove-recipient":"","wikilove-anon":0,"mbEmailEnabled":true,"mbUserEmail":false,"mbIsEmailConfirmationPending":false,"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":8640,"title":"Database normalization","namespace":0,"categories":["Data modeling","Database constraints","Database management systems","Database normalization","Relational algebra"],"permissionLevel":"aft-reader"}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3
+,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"wikilove-enabled":1,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"gadget-teahouse":1,
+"gadget-ReferenceTooltips":1,"gadget-HotCat":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:013a65dbaca8076556d129e802aa8c3c */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.vector.footerCleanup","ext.wikimediaShopLink.core","ext.centralNotice.bannerController"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.21wmf3/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Database_normalization skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- CentralNotice --><script>
+	mw.loader.using( 'ext.centralNotice.bannerController', function() { mw.centralNotice.initialize(); } );
+</script>
+</div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading"><span dir="auto">Database normalization</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>Database normalization</b> is the process of organizing the <a href="/wiki/Field_(computer_science)" title="Field (computer science)">fields</a> and <a href="/wiki/Table_(database)" title="Table (database)">tables</a> of a <a href="/wiki/Relational_database" title="Relational database">relational database</a> to minimize <a href="/wiki/Data_redundancy" title="Data redundancy">redundancy</a> and dependency. Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships between them. The objective is to isolate data so that additions, deletions, and modifications of a field can be made in just one table and then propagated through the rest of the database via the defined relationships.</p>
+<p><a href="/wiki/Edgar_F._Codd" title="Edgar F. Codd">Edgar F. Codd</a>, the inventor of the <a href="/wiki/Relational_model" title="Relational model">relational model</a>, introduced the concept of normalization and what we now know as the First Normal Form (<a href="/wiki/First_normal_form" title="First normal form">1NF</a>) in 1970.<sup id="cite_ref-Codd1970_1-0" class="reference"><a href="#cite_note-Codd1970-1"><span>[</span>1<span>]</span></a></sup> Codd went on to define the Second Normal Form (<a href="/wiki/Second_normal_form" title="Second normal form">2NF</a>) and Third Normal Form (<a href="/wiki/Third_normal_form" title="Third normal form">3NF</a>) in 1971,<sup id="cite_ref-Codd.2C_E.F_1971_2-0" class="reference"><a href="#cite_note-Codd.2C_E.F_1971-2"><span>[</span>2<span>]</span></a></sup> and Codd and <a href="/wiki/Raymond_F._Boyce" title="Raymond F. Boyce">Raymond F. Boyce</a> defined the Boyce-Codd Normal Form (<a href="/wiki/Boyce%E2%80%93Codd_normal_form" title="Boyce–Codd normal form">BCNF</a>) in 1974.<sup id="cite_ref-CoddBCNF_3-0" class="reference"><a href="#cite_note-CoddBCNF-3"><span>[</span>3<span>]</span></a></sup> Informally, a relational database table is often described as "normalized" if it is in the Third Normal Form.<sup id="cite_ref-DateIntroDBSys_4-0" class="reference"><a href="#cite_note-DateIntroDBSys-4"><span>[</span>4<span>]</span></a></sup> Most 3NF tables are free of insertion, update, and deletion anomalies.</p>
+<p>A standard piece of database design guidance is that the designer should create a fully normalized design; selective <a href="/wiki/Denormalization" title="Denormalization">denormalization</a> can subsequently be performed for <a href="/wiki/Computer_performance" title="Computer performance">performance</a> reasons.<sup id="cite_ref-DateDenorm_5-0" class="reference"><a href="#cite_note-DateDenorm-5"><span>[</span>5<span>]</span></a></sup></p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Objectives_of_normalization"><span class="tocnumber">1</span> <span class="toctext">Objectives of normalization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Free_the_database_of_modification_anomalies"><span class="tocnumber">1.1</span> <span class="toctext">Free the database of modification anomalies</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Minimize_redesign_when_extending_the_database_structure"><span class="tocnumber">1.2</span> <span class="toctext">Minimize redesign when extending the database structure</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Make_the_data_model_more_informative_to_users"><span class="tocnumber">1.3</span> <span class="toctext">Make the data model more informative to users</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Avoid_bias_towards_any_particular_pattern_of_querying"><span class="tocnumber">1.4</span> <span class="toctext">Avoid bias towards any particular pattern of querying</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Example"><span class="tocnumber">1.5</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Background_to_normalization:_definitions"><span class="tocnumber">2</span> <span class="toctext">Background to normalization: definitions</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Normal_forms"><span class="tocnumber">3</span> <span class="toctext">Normal forms</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Denormalization"><span class="tocnumber">4</span> <span class="toctext">Denormalization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Non-first_normal_form_.28NF.C2.B2_or_N1NF.29"><span class="tocnumber">4.1</span> <span class="toctext">Non-first normal form (NF² or N1NF)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Notes_and_references"><span class="tocnumber">6</span> <span class="toctext">Notes and references</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=1" title="Edit section: Objectives of normalization">edit</a>]</span> <span class="mw-headline" id="Objectives_of_normalization">Objectives of normalization</span></h2>
+<p>A basic objective of the <a href="/wiki/First_normal_form" title="First normal form">first normal form</a> defined by Codd in 1970 was to permit data to be queried and manipulated using a "universal data sub-language" grounded in <a href="/wiki/First-order_logic" title="First-order logic">first-order logic</a>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> (<a href="/wiki/SQL" title="SQL">SQL</a> is an example of such a data sub-language, albeit one that Codd regarded as seriously flawed.)<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>The objectives of normalization beyond 1NF (First Normal Form) were stated as follows by Codd:</p>
+<blockquote class="toccolours" style="float:none; padding: 10px 15px 10px 15px; display:table;">
+<dl>
+<dd>1. To free the collection of relations from undesirable insertion, update and deletion dependencies;</dd>
+<dd>2. To reduce the need for restructuring the collection of relations, as new types of data are introduced, and thus increase the life span of application programs;</dd>
+<dd>3. To make the relational model more informative to users;</dd>
+<dd>4. To make the collection of relations neutral to the query statistics, where these statistics are liable to change as time goes by.</dd>
+</dl>
+<p style="text-align: right;">— <cite>E.F. Codd, <i>"Further Normalization of the Data Base Relational Model"<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></i></cite></p>
+</blockquote>
+<p>The sections below give details of each of these objectives.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=2" title="Edit section: Free the database of modification anomalies">edit</a>]</span> <span class="mw-headline" id="Free_the_database_of_modification_anomalies">Free the database of modification anomalies</span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:282px;"><a href="/wiki/File:Update_anomaly.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Update_anomaly.svg/280px-Update_anomaly.svg.png" width="280" height="121" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Update_anomaly.svg/420px-Update_anomaly.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Update_anomaly.svg/560px-Update_anomaly.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Update_anomaly.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.21wmf3/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An <b>update anomaly</b>. Employee 519 is shown as having different addresses on different records.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:282px;"><a href="/wiki/File:Insertion_anomaly.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Insertion_anomaly.svg/280px-Insertion_anomaly.svg.png" width="280" height="137" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Insertion_anomaly.svg/420px-Insertion_anomaly.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Insertion_anomaly.svg/560px-Insertion_anomaly.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Insertion_anomaly.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.21wmf3/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An <b>insertion anomaly</b>. Until the new faculty member, Dr. Newsome, is assigned to teach at least one course, his details cannot be recorded.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:282px;"><a href="/wiki/File:Deletion_anomaly.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Deletion_anomaly.svg/280px-Deletion_anomaly.svg.png" width="280" height="120" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Deletion_anomaly.svg/420px-Deletion_anomaly.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Deletion_anomaly.svg/560px-Deletion_anomaly.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Deletion_anomaly.svg" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.21wmf3/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A <b>deletion anomaly</b>. All information about Dr. Giddens is lost when he temporarily ceases to be assigned to any courses.</div>
+</div>
+</div>
+<p>When an attempt is made to modify (update, insert into, or delete from) a table, undesired side-effects may follow. Not all tables can suffer from these side-effects; rather, the side-effects can only arise in tables that have not been sufficiently normalized. An insufficiently normalized table might have one or more of the following characteristics:</p>
+<ul>
+<li>The same information can be expressed on multiple rows; therefore updates to the table may result in logical inconsistencies. For example, each record in an "Employees' Skills" table might contain an Employee ID, Employee Address, and Skill; thus a change of address for a particular employee will potentially need to be applied to multiple records (one for each of his skills). If the update is not carried through successfully—if, that is, the employee's address is updated on some records but not others—then the table is left in an inconsistent state. Specifically, the table provides conflicting answers to the question of what this particular employee's address is. This phenomenon is known as an <b>update anomaly</b>.</li>
+<li>There are circumstances in which certain facts cannot be recorded at all. For example, each record in a "Faculty and Their Courses" table might contain a Faculty ID, Faculty Name, Faculty Hire Date, and Course Code—thus we can record the details of any faculty member who teaches at least one course, but we cannot record the details of a newly hired faculty member who has not yet been assigned to teach any courses except by setting the Course Code to null. This phenomenon is known as an <b>insertion anomaly</b>.</li>
+<li>Under certain circumstances, deletion of data representing certain facts necessitates deletion of data representing completely different facts. The "Faculty and Their Courses" table described in the previous example suffers from this type of anomaly, for if a faculty member temporarily ceases to be assigned to any courses, we must delete the last of the records on which that faculty member appears, effectively also deleting the faculty member. This phenomenon is known as a <b>deletion anomaly</b>.</li>
+</ul>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=3" title="Edit section: Minimize redesign when extending the database structure">edit</a>]</span> <span class="mw-headline" id="Minimize_redesign_when_extending_the_database_structure">Minimize redesign when extending the database structure</span></h3>
+<p>When a fully normalized database structure is extended to allow it to accommodate new types of data, the pre-existing aspects of the database structure can remain largely or entirely unchanged. As a result, applications interacting with the database are minimally affected.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=4" title="Edit section: Make the data model more informative to users">edit</a>]</span> <span class="mw-headline" id="Make_the_data_model_more_informative_to_users">Make the data model more informative to users</span></h3>
+<p>Normalized tables, and the relationship between one normalized table and another, mirror real-world concepts and their interrelationships.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=5" title="Edit section: Avoid bias towards any particular pattern of querying">edit</a>]</span> <span class="mw-headline" id="Avoid_bias_towards_any_particular_pattern_of_querying">Avoid bias towards any particular pattern of querying</span></h3>
+<p>Normalized tables are suitable for general-purpose querying. This means any queries against these tables, including future queries whose details cannot be anticipated, are supported. In contrast, tables that are not normalized lend themselves to some types of queries, but not others.</p>
+<p>For example, consider an online bookseller whose customers maintain wishlists of books they'd like to have. For the obvious, anticipated query—what books does this customer want?—it's enough to store the customer's wishlist in the table as, say, a homogeneous string of authors and titles.</p>
+<p>With this design, though, the database can answer only that one single query. It cannot by itself answer interesting but unanticipated queries: What is the most-wished-for book? Which customers are interested in WWII espionage? How does Lord Byron stack up against his contemporary poets? Answers to these questions must come from special adaptive tools completely separate from the database. One tool might be software written especially to handle such queries. This special adaptive software has just one single purpose: in effect to normalize the non-normalized field.</p>
+<p>Unforeseen queries can be answered trivially, and entirely within the database framework, with a normalized table.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=6" title="Edit section: Example">edit</a>]</span> <span class="mw-headline" id="Example">Example</span></h3>
+<p>Querying and manipulating the data within an unnormalized data structure, such as the following non-1NF representation of customers' credit card transactions, involves more complexity than is really necessary:</p>
+<table class="wikitable">
+<tr>
+<th>Customer</th>
+<th>Transactions</th>
+</tr>
+<tr>
+<td>Jones</td>
+<td>
+<table class="wikitable">
+<tr>
+<th>Tr. ID</th>
+<th>Date</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td>12890</td>
+<td>14-Oct-2003</td>
+<td>−87</td>
+</tr>
+<tr>
+<td>12904</td>
+<td>15-Oct-2003</td>
+<td>−50</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>Wilkins</td>
+<td>
+<table class="wikitable">
+<tr>
+<th>Tr. ID</th>
+<th>Date</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td>12898</td>
+<td>14-Oct-2003</td>
+<td>−21</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>Stevens</td>
+<td>
+<table class="wikitable">
+<tr>
+<th>Tr. ID</th>
+<th>Date</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td>12907</td>
+<td>15-Oct-2003</td>
+<td>−18</td>
+</tr>
+<tr>
+<td>14920</td>
+<td>20-Nov-2003</td>
+<td>−70</td>
+</tr>
+<tr>
+<td>15003</td>
+<td>27-Nov-2003</td>
+<td>−60</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p><br />
+To each customer corresponds a <i>repeating group</i> of transactions. The automated evaluation of any query relating to customers' transactions therefore would broadly involve two stages:</p>
+<ol>
+<li>Unpacking one or more customers' groups of transactions allowing the individual transactions in a group to be examined, and</li>
+<li>Deriving a query result based on the results of the first stage</li>
+</ol>
+<p>For example, in order to find out the monetary sum of all transactions that occurred in October 2003 for all customers, the system would have to know that it must first unpack the <i>Transactions</i> group of each customer, then sum the <i>Amounts</i> of all transactions thus obtained where the <i>Date</i> of the transaction falls in October 2003.</p>
+<p>One of Codd's important insights was that this structural complexity could always be removed completely, leading to much greater power and flexibility in the way queries could be formulated (by <a href="/wiki/User_(computing)" title="User (computing)">users</a> and <a href="/wiki/Application_software" title="Application software">applications</a>) and evaluated (by the <a href="/wiki/Database_management_system" title="Database management system">DBMS</a>). The normalized equivalent of the structure above would look like this:</p>
+<table class="wikitable">
+<tr>
+<th>Customer</th>
+<th>Tr. ID</th>
+<th>Date</th>
+<th>Amount</th>
+</tr>
+<tr>
+<td>Jones</td>
+<td>12890</td>
+<td>14-Oct-2003</td>
+<td>−87</td>
+</tr>
+<tr>
+<td>Jones</td>
+<td>12904</td>
+<td>15-Oct-2003</td>
+<td>−50</td>
+</tr>
+<tr>
+<td>Wilkins</td>
+<td>12898</td>
+<td>14-Oct-2003</td>
+<td>−21</td>
+</tr>
+<tr>
+<td>Stevens</td>
+<td>12907</td>
+<td>15-Oct-2003</td>
+<td>−18</td>
+</tr>
+<tr>
+<td>Stevens</td>
+<td>14920</td>
+<td>20-Nov-2003</td>
+<td>−70</td>
+</tr>
+<tr>
+<td>Stevens</td>
+<td>15003</td>
+<td>27-Nov-2003</td>
+<td>−60</td>
+</tr>
+</table>
+<p>Now each row represents an individual credit card transaction, and the DBMS can obtain the answer of interest, simply by finding all rows with a Date falling in October, and summing their Amounts. The data structure places all of the values on an equal footing, exposing each to the DBMS directly, so each can potentially participate directly in queries; whereas in the previous situation some values were embedded in lower-level structures that had to be handled specially. Accordingly, the normalized design lends itself to general-purpose query processing, whereas the unnormalized design does not.</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=7" title="Edit section: Background to normalization: definitions">edit</a>]</span> <span class="mw-headline" id="Background_to_normalization:_definitions">Background to normalization: definitions</span></h2>
+<dl>
+<dt>Functional dependency</dt>
+<dd>In a given table, an attribute <i>Y</i> is said to have a <a href="/wiki/Functional_dependency" title="Functional dependency">functional dependency</a> on a set of attributes <i>X</i> (written <i>X</i> → <i>Y</i>) if and only if each <i>X</i> value is associated with precisely one <i>Y</i> value. For example, in an "Employee" table that includes the attributes "Employee ID" and "Employee Date of Birth", the functional dependency {Employee ID} → {Employee Date of Birth} would hold. It follows from the previous two sentences that each {Employee ID} is associated with precisely one {Employee Date of Birth}.</dd>
+<dt>Trivial functional dependency</dt>
+<dd>A trivial functional dependency is a functional dependency of an attribute on a superset of itself. {Employee ID, Employee Address} → {Employee Address} is trivial, as is {Employee Address} → {Employee Address}.</dd>
+<dt>Full functional dependency</dt>
+<dd>An attribute is fully functionally dependent on a set of attributes X if it is:
+<ul>
+<li>functionally dependent on X, and</li>
+<li>not functionally dependent on any proper subset of X. {Employee Address} has a functional dependency on {Employee ID, Skill}, but not a <i>full</i> functional dependency, because it is also dependent on {Employee ID}.</li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Transitive dependency</dt>
+<dd>A <a href="/wiki/Transitive_dependency" title="Transitive dependency">transitive dependency</a> is an indirect functional dependency, one in which <i>X</i>→<i>Z</i> only by virtue of <i>X</i>→<i>Y</i> and <i>Y</i>→<i>Z</i>.</dd>
+<dt>Multivalued dependency</dt>
+<dd>A <a href="/wiki/Multivalued_dependency" title="Multivalued dependency">multivalued dependency</a> is a constraint according to which the presence of certain rows in a table implies the presence of certain other rows.</dd>
+<dt>Join dependency</dt>
+<dd>A table <i>T</i> is subject to a <a href="/wiki/Join_dependency" title="Join dependency">join dependency</a> if <i>T</i> can always be recreated by joining multiple tables each having a subset of the attributes of <i>T</i>.</dd>
+<dt>Superkey</dt>
+<dd>A <a href="/wiki/Superkey" title="Superkey">superkey</a> is a combination of attributes that can be used to uniquely identify a database record. A table might have many superkeys.</dd>
+<dt>Candidate key</dt>
+<dd>A <a href="/wiki/Candidate_key" title="Candidate key">candidate key</a> is a special subset of superkeys that do not have any extraneous information in them: it is a minimal superkey.</dd>
+<dd><i>Example:</i>
+<dl>
+<dd>A table with the fields &lt;Name&gt;, &lt;Age&gt;, &lt;SSN&gt; and &lt;Phone Extension&gt; has many possible superkeys. Three of these are &lt;SSN&gt;, &lt;Phone Extension, Name&gt; and &lt;SSN, Name&gt;. Of those, only &lt;SSN&gt; is a candidate key as the others contain information not necessary to uniquely identify records ('SSN' here refers to Social Security Number, which is unique to each person).</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>Non-prime attribute</dt>
+<dd>A non-prime attribute is an attribute that does not occur in any candidate key. Employee Address would be a non-prime attribute in the "Employees' Skills" table.</dd>
+<dt>Prime attribute</dt>
+<dd>A prime attribute, conversely, is an attribute that does occur in some candidate key.</dd>
+<dt>Primary key</dt>
+<dd>Most <a href="/wiki/Database_management_system" title="Database management system">DBMSs</a> require a table to be defined as having a single unique key, rather than a number of possible unique keys. A <a href="/wiki/Primary_key" title="Primary key" class="mw-redirect">primary key</a> is a key which the database designer has designated for this purpose.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=8" title="Edit section: Normal forms">edit</a>]</span> <span class="mw-headline" id="Normal_forms">Normal forms</span></h2>
+<p>The <b>normal forms</b> (abbrev. <b>NF</b>) of relational database theory provide criteria for determining a table's degree of vulnerability to logical inconsistencies and anomalies. The higher the normal form applicable to a table, the less vulnerable it is. Each table has a "<b>highest normal form</b>" (<b>HNF</b>): by definition, a table always meets the requirements of its HNF and of all normal forms lower than its HNF; also by definition, a table fails to meet the requirements of any normal form higher than its HNF.</p>
+<p>The normal forms are applicable to individual tables; to say that an entire database is in normal form <i>n</i> is to say that all of its tables are in normal form <i>n</i>.</p>
+<p>Newcomers to database design sometimes suppose that normalization proceeds in an iterative fashion, i.e. a 1NF design is first normalized to 2NF, then to 3NF, and so on. This is not an accurate description of how normalization typically works. A sensibly designed table is likely to be in 3NF on the first attempt; furthermore, if it is 3NF, it is overwhelmingly likely to have an HNF of 5NF. Achieving the "higher" normal forms (above 3NF) does not usually require an extra expenditure of effort on the part of the designer, because 3NF tables usually need no modification to meet the requirements of these higher normal forms.</p>
+<p>The main normal forms are summarized below.</p>
+<table class="wikitable">
+<tr>
+<th></th>
+<th>Normal form</th>
+<th>Defined by</th>
+<th>In</th>
+<th>Brief definition</th>
+</tr>
+<tr>
+<td>1NF</td>
+<td><a href="/wiki/First_normal_form" title="First normal form">First normal form</a></td>
+<td>Two versions: <a href="/wiki/Edgar_F._Codd" title="Edgar F. Codd">E.F. Codd</a> (1970), <a href="/wiki/Christopher_J._Date" title="Christopher J. Date">C.J. Date</a> (2003)</td>
+<td>1970 <sup id="cite_ref-Codd1970_1-1" class="reference"><a href="#cite_note-Codd1970-1"><span>[</span>1<span>]</span></a></sup> and 2003 <sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup></td>
+<td>Table faithfully represents a <a href="/wiki/Relation_(database)" title="Relation (database)">relation</a> and has no <i>repeating groups</i></td>
+</tr>
+<tr>
+<td>2NF</td>
+<td><a href="/wiki/Second_normal_form" title="Second normal form">Second normal form</a></td>
+<td><a href="/wiki/Edgar_F._Codd" title="Edgar F. Codd">E.F. Codd</a></td>
+<td>1971 <sup id="cite_ref-Codd.2C_E.F_1971_2-1" class="reference"><a href="#cite_note-Codd.2C_E.F_1971-2"><span>[</span>2<span>]</span></a></sup></td>
+<td>No non-prime attribute in the table is <a href="/wiki/Functional_dependency" title="Functional dependency">functionally dependent</a> on a <a href="/wiki/Proper_subset" title="Proper subset" class="mw-redirect">proper subset</a> of any <a href="/wiki/Candidate_key" title="Candidate key">candidate key</a></td>
+</tr>
+<tr>
+<td>3NF</td>
+<td><a href="/wiki/Third_normal_form" title="Third normal form">Third normal form</a></td>
+<td>Two versions: <a href="/wiki/Edgar_F._Codd" title="Edgar F. Codd">E.F. Codd</a> (1971), C. Zaniolo (1982)</td>
+<td>1971 <sup id="cite_ref-Codd.2C_E.F_1971_2-2" class="reference"><a href="#cite_note-Codd.2C_E.F_1971-2"><span>[</span>2<span>]</span></a></sup> and 1982 <sup id="cite_ref-Zaniolo.2C_Carlo_1982_10-0" class="reference"><a href="#cite_note-Zaniolo.2C_Carlo_1982-10"><span>[</span>10<span>]</span></a></sup></td>
+<td>Every non-prime attribute is non-transitively dependent on every candidate key in the table. The attributes that do not contribute to the description of the primary key are removed from the table. In other words, no transitive dependency is allowed.</td>
+</tr>
+<tr>
+<td>EKNF</td>
+<td><a href="/wiki/Elementary_Key_Normal_Form" title="Elementary Key Normal Form">Elementary Key Normal Form</a></td>
+<td>C. Zaniolo</td>
+<td>1982 <sup id="cite_ref-Zaniolo.2C_Carlo_1982_10-1" class="reference"><a href="#cite_note-Zaniolo.2C_Carlo_1982-10"><span>[</span>10<span>]</span></a></sup></td>
+<td>Every non-trivial functional dependency in the table is either the dependency of an elementary key attribute or a dependency on a superkey</td>
+</tr>
+<tr>
+<td>BCNF</td>
+<td><a href="/wiki/Boyce%E2%80%93Codd_normal_form" title="Boyce–Codd normal form">Boyce–Codd normal form</a></td>
+<td><a href="/wiki/Raymond_F._Boyce" title="Raymond F. Boyce">Raymond F. Boyce</a> and <a href="/wiki/Edgar_F._Codd" title="Edgar F. Codd">E.F. Codd</a></td>
+<td>1974 <sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></td>
+<td>Every non-trivial functional dependency in the table is a dependency on a <a href="/wiki/Superkey" title="Superkey">superkey</a></td>
+</tr>
+<tr>
+<td>4NF</td>
+<td><a href="/wiki/Fourth_normal_form" title="Fourth normal form">Fourth normal form</a></td>
+<td><a href="/wiki/Ronald_Fagin" title="Ronald Fagin">Ronald Fagin</a></td>
+<td>1977 <sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></td>
+<td>Every non-trivial <a href="/wiki/Multivalued_dependency" title="Multivalued dependency">multivalued dependency</a> in the table is a dependency on a superkey</td>
+</tr>
+<tr>
+<td>5NF</td>
+<td><a href="/wiki/Fifth_normal_form" title="Fifth normal form">Fifth normal form</a></td>
+<td><a href="/wiki/Ronald_Fagin" title="Ronald Fagin">Ronald Fagin</a></td>
+<td>1979 <sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup></td>
+<td>Every non-trivial <a href="/wiki/Join_dependency" title="Join dependency">join dependency</a> in the table is implied by the superkeys of the table</td>
+</tr>
+<tr>
+<td>DKNF</td>
+<td><a href="/wiki/Domain/key_normal_form" title="Domain/key normal form">Domain/key normal form</a></td>
+<td><a href="/wiki/Ronald_Fagin" title="Ronald Fagin">Ronald Fagin</a></td>
+<td>1981 <sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></td>
+<td>Every constraint on the table is a <a href="/wiki/Logical_consequence" title="Logical consequence">logical consequence</a> of the table's domain constraints and key constraints</td>
+</tr>
+<tr>
+<td>6NF</td>
+<td><a href="/wiki/Sixth_normal_form" title="Sixth normal form">Sixth normal form</a></td>
+<td><a href="/wiki/Christopher_J._Date" title="Christopher J. Date">C.J. Date</a>, <a href="/wiki/Hugh_Darwen" title="Hugh Darwen">Hugh Darwen</a>, and <a href="/wiki/Nikos_Lorentzos" title="Nikos Lorentzos">Nikos Lorentzos</a></td>
+<td>2002 <sup id="cite_ref-Date6NF_15-0" class="reference"><a href="#cite_note-Date6NF-15"><span>[</span>15<span>]</span></a></sup></td>
+<td>Table features no non-trivial join dependencies at all (with reference to generalized join operator)</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=9" title="Edit section: Denormalization">edit</a>]</span> <span class="mw-headline" id="Denormalization">Denormalization</span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Denormalization" title="Denormalization">Denormalization</a></div>
+<p>Databases intended for <a href="/wiki/Online_transaction_processing" title="Online transaction processing">online transaction processing</a> (OLTP) are typically more normalized than databases intended for <a href="/wiki/Online_analytical_processing" title="Online analytical processing">online analytical processing</a> (OLAP). OLTP applications are characterized by a high volume of small transactions such as updating a sales record at a supermarket checkout counter. The expectation is that each transaction will leave the database in a consistent state. By contrast, databases intended for OLAP operations are primarily "read mostly" databases. OLAP applications tend to extract historical data that has accumulated over a long period of time. For such databases, redundant or "denormalized" data may facilitate <a href="/wiki/Business_intelligence" title="Business intelligence">business intelligence</a> applications. Specifically, <a href="/wiki/Dimension_table" title="Dimension table">dimensional tables</a> in a <a href="/wiki/Star_schema" title="Star schema">star schema</a> often contain denormalized data. The denormalized or redundant data must be carefully controlled during <a href="/wiki/Extract,_transform,_load" title="Extract, transform, load">extract, transform, load</a> (ETL) processing, and users should not be permitted to see the data until it is in a consistent state. The normalized alternative to the star schema is the <a href="/wiki/Snowflake_schema" title="Snowflake schema">snowflake schema</a>. In many cases, the need for denormalization has waned as computers and RDBMS software have become more powerful, but since data volumes have generally increased along with hardware and software performance, OLAP databases often still use denormalized schemas.</p>
+<p>Denormalization is also used to improve performance on smaller computers as in computerized cash-registers and mobile devices, since these may use the data for look-up only (e.g. price lookups). Denormalization may also be used when no RDBMS exists for a platform (such as Palm), or no changes are to be made to the data and a swift response is crucial.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=10" title="Edit section: Non-first normal form (NF² or N1NF)">edit</a>]</span> <span class="mw-headline" id="Non-first_normal_form_.28NF.C2.B2_or_N1NF.29">Non-first normal form (NF² or N1NF)</span></h3>
+<p>In recognition that denormalization can be deliberate and useful, the non-first normal form is a definition of database designs which do not conform to first normal form, by allowing "sets and sets of sets to be attribute domains" (Schek 1982). The languages used to query and manipulate data in the model must be extended accordingly to support such values.</p>
+<p>One way of looking at this is to consider such structured values as being specialized types of values (domains), with their own domain-specific languages. However, what is usually meant by non-1NF models is the approach in which the relational model and the languages used to query it are extended with a general mechanism for such structure; for instance, the <a href="/wiki/Nested_relational_model" title="Nested relational model" class="mw-redirect">nested relational model</a> supports the use of relations as domain values, by adding two additional operators (<i>nest</i> and <i>unnest</i>) to the relational algebra that can create and flatten nested relations, respectively.</p>
+<p>Consider the following table:</p>
+<table class="wikitable">
+<caption>First Normal Form</caption>
+<tr>
+<th>Person</th>
+<th>Favourite Colour</th>
+</tr>
+<tr>
+<td>Bob</td>
+<td>blue</td>
+</tr>
+<tr>
+<td>Bob</td>
+<td>red</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>green</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>yellow</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>red</td>
+</tr>
+</table>
+<p>Assume a person has several favourite colours. Obviously, favourite colours consist of a set of colours modeled by the given table. To transform a 1NF into an NF² table a "nest" operator is required which extends the relational algebra of the higher normal forms. Applying the "nest" operator to the 1NF table yields the following NF² table:</p>
+<table class="wikitable">
+<caption>Non-First Normal Form</caption>
+<tr>
+<th>Person</th>
+<th>Favourite Colours</th>
+</tr>
+<tr>
+<td>Bob</td>
+<td>
+<table class="wikitable">
+<tr>
+<th>Favourite Colour</th>
+</tr>
+<tr>
+<td>blue</td>
+</tr>
+<tr>
+<td>red</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>
+<table class="wikitable">
+<tr>
+<th>Favourite Colour</th>
+</tr>
+<tr>
+<td>green</td>
+</tr>
+<tr>
+<td>yellow</td>
+</tr>
+<tr>
+<td>red</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>To transform this NF² table back into a 1NF an "unnest" operator is required which extends the relational algebra of the higher normal forms. The unnest, in this case, would make "colours" into its own table.</p>
+<p>Although "unnest" is the mathematical inverse to "nest", the operator "nest" is not always the mathematical inverse of "unnest". Another constraint required is for the operators to be <a href="/wiki/Bijection" title="Bijection">bijective</a>, which is covered by the <a href="/w/index.php?title=Partitioned_Normal_Form&amp;action=edit&amp;redlink=1" class="new" title="Partitioned Normal Form (page does not exist)">Partitioned Normal Form</a> (PNF).</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a>]</span> <span class="mw-headline" id="See_also">See also</span></h2>
+<ul>
+<li><a href="/wiki/Aspect_(computer_science)" title="Aspect (computer science)" class="mw-redirect">Aspect (computer science)</a></li>
+<li><a href="/wiki/Business_rule" title="Business rule">Business rule</a></li>
+<li><a href="/wiki/Canonical_form" title="Canonical form">Canonical form</a></li>
+<li><a href="/wiki/Cross-cutting_concern" title="Cross-cutting concern">Cross-cutting concern</a></li>
+<li><a href="/wiki/Database_testing" title="Database testing">Database testing</a></li>
+<li><a href="/wiki/Optimization_(computer_science)" title="Optimization (computer science)" class="mw-redirect">Optimization (computer science)</a></li>
+<li><a href="/wiki/Refactoring" title="Refactoring" class="mw-redirect">Refactoring</a></li>
+<li><a href="/wiki/Universal_relation_assumption" title="Universal relation assumption">Universal relation assumption</a></li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=12" title="Edit section: Notes and references">edit</a>]</span> <span class="mw-headline" id="Notes_and_references">Notes and references</span></h2>
+<div class="reflist references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Codd1970-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Codd1970_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Codd1970_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation Journal"><a href="/wiki/E.F._Codd" title="E.F. Codd" class="mw-redirect">Codd, E.F.</a> (June 1970). <a rel="nofollow" class="external text" href="http://www.acm.org/classics/nov95/toc.html">"A Relational Model of Data for Large Shared Data Banks"</a>. <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Communications of the ACM</a></i> <b>13</b> (6): 377–387. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F362384.362685">10.1145/362384.362685</a><span class="printonly">. <a rel="nofollow" class="external free" href="http://www.acm.org/classics/nov95/toc.html">http://www.acm.org/classics/nov95/toc.html</a></span>.</span></span></li>
+<li id="cite_note-Codd.2C_E.F_1971-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Codd.2C_E.F_1971_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Codd.2C_E.F_1971_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Codd.2C_E.F_1971_2-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">Codd, E.F. "Further Normalization of the Data Base Relational Model". (Presented at Courant Computer Science Symposia Series 6, "Data Base Systems", New York City, May 24–25, 1971.) IBM Research Report RJ909 (August 31, 1971). Republished in Randall J. Rustin (ed.), <i>Data Base Systems: Courant Computer Science Symposia Series 6</i>. Prentice-Hall, 1972.</span></li>
+<li id="cite_note-CoddBCNF-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-CoddBCNF_3-0">^</a></b></span> <span class="reference-text">Codd, E. F. "Recent Investigations into Relational Data Base Systems". IBM Research Report RJ1385 (April 23, 1974). Republished in <i>Proc. 1974 Congress</i> (Stockholm, Sweden, 1974). , N.Y.: North-Holland (1974).</span></li>
+<li id="cite_note-DateIntroDBSys-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-DateIntroDBSys_4-0">^</a></b></span> <span class="reference-text">C.J. Date. <i>An Introduction to Database Systems</i>. Addison-Wesley (1999), p. 290</span></li>
+<li id="cite_note-DateDenorm-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-DateDenorm_5-0">^</a></b></span> <span class="reference-text">Chris Date, for example, writes: "I believe firmly that anything less than a fully normalized design is <i>strongly contraindicated</i> ... [Y]ou should <i>"denormalize" only as a last resort</i>. That is, you should back off from a fully normalized design only if all other strategies for improving performance have somehow failed to meet requirements." Date, C.J. <i>Database in Depth: Relational Theory for Practitioners</i>. O'Reilly (2005), p. 152.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">"The adoption of a relational model of data ... permits the development of a universal data sub-language based on an applied predicate calculus. A first-order predicate calculus suffices if the collection of relations is in first normal form. Such a language would provide a yardstick of linguistic power for all other proposed data languages, and would itself be a strong candidate for embedding (with appropriate syntactic modification) in a variety of host Ianguages (programming, command- or problem-oriented)." Codd, <a rel="nofollow" class="external text" href="http://www.acm.org/classics/nov95/toc.html">"A Relational Model of Data for Large Shared Data Banks"</a>, p. 381</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Codd, E.F. Chapter 23, "Serious Flaws in SQL", in <i>The Relational Model for Database Management: Version 2</i>. Addison-Wesley (1990), pp. 371–389</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Codd, E.F. "Further Normalization of the Data Base Relational Model", p. 34</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Date, C. J. "What First Normal Form Really Means" in <i>Date on Database: Writings 2000–2006</i> (Springer-Verlag, 2006), pp. 127–128.</span></li>
+<li id="cite_note-Zaniolo.2C_Carlo_1982-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-Zaniolo.2C_Carlo_1982_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Zaniolo.2C_Carlo_1982_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Zaniolo, Carlo. "A New Normal Form for the Design of Relational Database Schemata." <i>ACM Transactions on Database Systems</i> 7(3), September 1982.</span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Codd, E. F. "Recent Investigations into Relational Data Base Systems". IBM Research Report RJ1385 (April 23, 1974). Republished in <i>Proc. 1974 Congress</i> (Stockholm, Sweden, 1974). New York, N.Y.: North-Holland (1974).</span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span class="citation Journal">Fagin, Ronald (September 1977). <a rel="nofollow" class="external text" href="http://www.almaden.ibm.com/cs/people/fagin/tods77.pdf">"Multivalued Dependencies and a New Normal Form for Relational Databases"</a>. <i>ACM Transactions on Database Systems</i> <b>2</b> (1): 267. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F320557.320571">10.1145/320557.320571</a><span class="printonly">. <a rel="nofollow" class="external free" href="http://www.almaden.ibm.com/cs/people/fagin/tods77.pdf">http://www.almaden.ibm.com/cs/people/fagin/tods77.pdf</a></span>.</span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">Ronald Fagin. "Normal Forms and Relational Database Operators". ACM SIGMOD International Conference on Management of Data, May 31-June 1, 1979, Boston, Mass. Also IBM Research Report RJ2471, Feb. 1979.</span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">Ronald Fagin (1981) <i><a rel="nofollow" class="external text" href="http://www.almaden.ibm.com/cs/people/fagin/tods81.pdf">A Normal Form for Relational Databases That Is Based on Domains and Keys</a></i>, <i>Communications of the ACM</i>, vol. 6, pp. 387–415</span></li>
+<li id="cite_note-Date6NF-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Date6NF_15-0">^</a></b></span> <span class="reference-text">C.J. Date, Hugh Darwen, Nikos Lorentzos. <i>Temporal Data and the Relational Model</i>. Morgan Kaufmann (2002), p. 176</span></li>
+</ol>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li>Paper: "Non First Normal Form Relations" by G. Jaeschke, H. -J Schek&#160;; IBM Heidelberg Scientific Center. -&gt; Paper studying normalization and denormalization operators nest and unnest as mildly described at the end of this wiki page.</li>
+</ul>
+</div>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=13" title="Edit section: Further reading">edit</a>]</span> <span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.troubleshooters.com/littstip/ltnorm.html">Litt's Tips: Normalization</a></li>
+<li>Date, C. J. (1999), <i><a rel="nofollow" class="external text" href="http://www.aw-bc.com/catalog/academic/product/0,1144,0321197844,00.html">An Introduction to Database Systems</a></i> (8th ed.). Addison-Wesley Longman. <a href="/wiki/Special:BookSources/0321197844" class="internal mw-magiclink-isbn">ISBN 0-321-19784-4</a>.</li>
+<li>Kent, W. (1983) <i><a rel="nofollow" class="external text" href="http://www.bkent.net/Doc/simple5.htm">A Simple Guide to Five Normal Forms in Relational Database Theory</a></i>, Communications of the ACM, vol. 26, pp.&#160;120–125</li>
+<li>Date, C.J., &amp; Darwen, H., &amp; Pascal, F. <i><a rel="nofollow" class="external text" href="http://www.dbdebunk.com">Database Debunkings</a></i></li>
+<li>H.-J. Schek, P. Pistor Data Structures for an Integrated Data Base Management and Information Retrieval System</li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Database_normalization&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a>]</span> <span class="mw-headline" id="External_links">External links</span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://databases.about.com/od/specificproducts/a/normalization.htm">Database Normalization Basics</a> by Mike Chapple (About.com)</li>
+<li><a rel="nofollow" class="external text" href="http://www.databasejournal.com/sqletc/article.php/1428511">Database Normalization Intro</a>, <a rel="nofollow" class="external text" href="http://www.databasejournal.com/sqletc/article.php/26861_1474411_1">Part 2</a></li>
+<li><a rel="nofollow" class="external text" href="http://mikehillyer.com/articles/an-introduction-to-database-normalization/">An Introduction to Database Normalization</a> by Mike Hillyer.</li>
+<li><a rel="nofollow" class="external text" href="http://phlonx.com/resources/nf3/">A tutorial on the first 3 normal forms</a> by Fred Coulson</li>
+<li><a rel="nofollow" class="external text" href="http://www.dbnormalization.com/">DB Normalization Examples</a></li>
+<li><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/283878">Description of the database normalization basics</a> by Microsoft</li>
+<li><a rel="nofollow" class="external text" href="http://www.barrywise.com/2008/01/database-normalization-and-design-techniques/">Database Normalization and Design Techniques</a> by Barry Wise, recommended reading for the Harvard MIS.</li>
+<li><a rel="nofollow" class="external text" href="http://www.bkent.net/Doc/simple5.htm">A Simple Guide to Five Normal Forms in Relational Database Theory</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="2">
+<div class="noprint plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Database_normalization" title="Template:Database normalization"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Database_normalization" title="Template talk:Database normalization"><span title="Discuss this template" style=";;background:none transparent;border:none;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Database_normalization&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div class="" style="font-size:110%;">Topics in <strong class="selflink">Database normalization</strong></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/First_normal_form" title="First normal form">First normal form</a></li>
+<li><a href="/wiki/Second_normal_form" title="Second normal form">Second normal form</a></li>
+<li><a href="/wiki/Third_normal_form" title="Third normal form">Third normal form</a></li>
+<li><a href="/wiki/Boyce%E2%80%93Codd_normal_form" title="Boyce–Codd normal form">Boyce–Codd normal form</a></li>
+<li><a href="/wiki/Fourth_normal_form" title="Fourth normal form">Fourth normal form</a></li>
+<li><a href="/wiki/Fifth_normal_form" title="Fifth normal form">Fifth normal form</a></li>
+<li><a href="/wiki/Domain/key_normal_form" title="Domain/key normal form">Domain/key normal form</a></li>
+<li><a href="/wiki/Sixth_normal_form" title="Sixth normal form">Sixth normal form</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Normalization</strong></li>
+<li><a href="/wiki/Denormalization" title="Denormalization">Denormalization</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="2">
+<div class="noprint plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Database" title="Template:Database"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Database" title="Template talk:Database"><span title="Discuss this template" style=";;background:none transparent;border:none;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Database&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div class="" style="font-size:110%;"><a href="/wiki/Database" title="Database">Database</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Main</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database#Major_database_usage_requirements" title="Database">Requirements</a></li>
+<li><a href="/wiki/Database_theory" title="Database theory">Theory</a></li>
+<li><a href="/wiki/Database_model" title="Database model">Models</a></li>
+<li><a href="/wiki/Database_management_system" title="Database management system">Database management system</a></li>
+<li><a href="/wiki/Database_machine" title="Database machine">Machine</a></li>
+<li><a href="/wiki/Database_server" title="Database server">Server</a></li>
+<li><a href="/wiki/Database_application" title="Database application">Application</a></li>
+<li><a href="/wiki/Database_connection" title="Database connection">Connection</a>
+<ul>
+<li><a href="/wiki/Datasource" title="Datasource">datasource</a></li>
+<li><a href="/wiki/Data_Source_Name" title="Data Source Name" class="mw-redirect">DSN</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Database_administrator" title="Database administrator">Administrator</a></li>
+<li><a href="/wiki/Lock_(database)" title="Lock (database)">Lock</a></li>
+<li><a href="/wiki/Category:Types_of_databases" title="Category:Types of databases">Types</a></li>
+<li><a href="/wiki/Comparison_of_database_tools" title="Comparison of database tools">Tools</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/wiki/Database#Database_languages" title="Database">Languages</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Data_definition_language" title="Data definition language">Data definition</a></li>
+<li><a href="/wiki/Data_manipulation_language" title="Data manipulation language">Data manipulation</a></li>
+<li><a href="/wiki/Query_language" title="Query language">Query</a>
+<ul>
+<li><a href="/wiki/Information_retrieval_query_language" title="Information retrieval query language">information retrieval</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/wiki/Database_security" title="Database security">Security</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database_activity_monitoring" title="Database activity monitoring">Activity monitoring</a></li>
+<li><a href="/wiki/Database_audit" title="Database audit">Audit</a></li>
+<li><a href="/wiki/Database_forensics" title="Database forensics">Forensics</a></li>
+<li><a href="/wiki/Negative_database" title="Negative database">Negative database</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/wiki/Database_design" title="Database design">Design</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Entity-relationship_model" title="Entity-relationship model" class="mw-redirect">Entities and relationships</a> (and <a href="/wiki/Enhanced_Entity-Relationship_Model" title="Enhanced Entity-Relationship Model" class="mw-redirect">Enhanced</a> notation)</li>
+<li><strong class="selflink">Normalization</strong></li>
+<li><a href="/wiki/Database_refactoring" title="Database refactoring">Refactoring</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Programming</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database_abstraction_layer" title="Database abstraction layer">Abstraction layer</a></li>
+<li><a href="/wiki/Object-relational_mapping" title="Object-relational mapping">Object-relational mapping</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Management</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database_virtualization" title="Database virtualization">Virtualization</a></li>
+<li><a href="/wiki/Database_tuning" title="Database tuning">Tuning</a>
+<ul>
+<li><a href="/wiki/Database_caching" title="Database caching">caching</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Data_migration#Database_migration" title="Data migration">Migration</a></li>
+<li><a href="/wiki/Database_preservation" title="Database preservation">Preservation</a></li>
+<li><a href="/wiki/Database_integrity" title="Database integrity">Integrity</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">See also</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database-centric_architecture" title="Database-centric architecture">Database-centric architecture</a></li>
+<li><a href="/wiki/Intelligent_database" title="Intelligent database">Intelligent database</a></li>
+<li><a href="/wiki/Two-phase_locking" title="Two-phase locking">Two-phase locking</a></li>
+<li><a href="/wiki/Locks_with_ordered_sharing" title="Locks with ordered sharing">Locks with ordered sharing</a></li>
+<li><a href="/wiki/Load_file" title="Load file">Load file</a></li>
+<li><a href="/wiki/Database_publishing" title="Database publishing">Publishing</a></li>
+<li><a href="/wiki/Halloween_Problem" title="Halloween Problem">Halloween Problem</a></li>
+<li><a href="/wiki/Log_shipping" title="Log shipping">Log shipping</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" style=";" colspan="2">
+<div>
+<ul>
+<li><b><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/24px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/32px-Symbol_book_class2.svg.png 2x" /> <a href="/wiki/Book:Databases" title="Book:Databases">Book</a></b></li>
+<li><b><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <a href="/wiki/Category:Databases" title="Category:Databases">Category</a></b></li>
+<li><b><img alt="WikiProject" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" /> <a href="/wiki/Wikipedia:WikiProject_Databases" title="Wikipedia:WikiProject Databases">WikiProject</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="2">
+<div class="noprint plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Databases" title="Template:Databases"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Databases" title="Template talk:Databases"><span title="Discuss this template" style=";;background:none transparent;border:none;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Databases&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div class="" style="font-size:110%;"><a href="/wiki/Database_management_system" title="Database management system">Database management systems</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" style=";" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/Database_model" title="Database model">Database models</a></li>
+<li><strong class="selflink">Database normalization</strong></li>
+<li><a href="/wiki/Database_storage_structures" title="Database storage structures">Database storage</a></li>
+<li><a href="/wiki/Distributed_database_management_system" title="Distributed database management system">Distributed DBMS</a></li>
+<li><a href="/wiki/Federated_database_system" title="Federated database system">Federated database system</a></li>
+<li><a href="/wiki/Referential_integrity" title="Referential integrity">Referential integrity</a></li>
+<li><a href="/wiki/Relational_algebra" title="Relational algebra">Relational algebra</a></li>
+<li><a href="/wiki/Relational_calculus" title="Relational calculus">Relational calculus</a></li>
+<li><a href="/wiki/Relational_database" title="Relational database">Relational database</a></li>
+<li><a href="/wiki/Relational_database_management_system" title="Relational database management system">Relational DBMS</a></li>
+<li><a href="/wiki/Relational_model" title="Relational model">Relational model</a></li>
+<li><a href="/wiki/Object-relational_database" title="Object-relational database">Object-relational database</a></li>
+<li><a href="/wiki/Transaction_processing" title="Transaction processing">Transaction processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Concepts</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database" title="Database">Database</a></li>
+<li><a href="/wiki/ACID" title="ACID">ACID</a></li>
+<li><a href="/wiki/Create,_read,_update_and_delete" title="Create, read, update and delete">CRUD</a></li>
+<li><a href="/wiki/Null_(SQL)" title="Null (SQL)">Null</a></li>
+<li><a href="/wiki/Candidate_key_(Template)" title="Candidate key (Template)" class="mw-redirect">Candidate key</a></li>
+<li><a href="/wiki/Foreign_key" title="Foreign key">Foreign key</a></li>
+<li><a href="/wiki/Primary_key" title="Primary key" class="mw-redirect">Primary key</a></li>
+<li><a href="/wiki/Superkey_(Template)" title="Superkey (Template)" class="mw-redirect">Superkey</a></li>
+<li><a href="/wiki/Surrogate_key" title="Surrogate key">Surrogate key</a></li>
+<li><a href="/wiki/Armstrong%27s_axioms" title="Armstrong's axioms">Armstrong's axioms</a></li>
+<li><a href="/wiki/NoSQL" title="NoSQL">NoSQL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Objects</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Relation_(database)_(Template)" title="Relation (database) (Template)" class="mw-redirect">Relation</a>
+<ul>
+<li><a href="/wiki/Table_(database)" title="Table (database)">table</a></li>
+<li><a href="/wiki/Column_(database)" title="Column (database)">column</a></li>
+<li><a href="/wiki/Row_(database)" title="Row (database)">row</a></li>
+</ul>
+</li>
+<li><a href="/wiki/View_(database)" title="View (database)">View</a></li>
+<li><a href="/wiki/Database_transaction" title="Database transaction">Transaction</a></li>
+<li><a href="/wiki/Transaction_log" title="Transaction log">Log</a></li>
+<li><a href="/wiki/Database_trigger" title="Database trigger">Trigger</a></li>
+<li><a href="/wiki/Index_(database)" title="Index (database)" class="mw-redirect">Index</a></li>
+<li><a href="/wiki/Stored_procedure" title="Stored procedure">Stored procedure</a></li>
+<li><a href="/wiki/Cursor_(databases)" title="Cursor (databases)">Cursor</a></li>
+<li><a href="/wiki/Partition_(database)" title="Partition (database)">Partition</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Components</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Concurrency_control" title="Concurrency control">Concurrency control</a></li>
+<li><a href="/wiki/Data_dictionary" title="Data dictionary">Data dictionary</a></li>
+<li><a href="/wiki/Java_Database_Connectivity" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="/wiki/XQuery_API_for_Java" title="XQuery API for Java">XQJ</a></li>
+<li><a href="/wiki/Open_Database_Connectivity" title="Open Database Connectivity" class="mw-redirect">ODBC</a></li>
+<li><a href="/wiki/Query_language" title="Query language">Query language</a></li>
+<li><a href="/wiki/Query_optimizer" title="Query optimizer">Query optimizer</a></li>
+<li><a href="/wiki/Query_plan" title="Query plan">Query plan</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">Functions</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Database_administration_and_automation" title="Database administration and automation">Administration and automation</a></li>
+<li><a href="/wiki/Query_optimization" title="Query optimization">Query optimization</a></li>
+<li><a href="/wiki/Database_replication" title="Database replication" class="mw-redirect">Replication</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" style=";" colspan="2">
+<div>
+<dl>
+<dt>Database products</dt>
+<dd><a href="/wiki/List_of_object-oriented_database_management_systems" title="List of object-oriented database management systems" class="mw-redirect">Object-oriented</a>
+<dl>
+<dd><a href="/wiki/Comparison_of_object-relational_database_management_systems" title="Comparison of object-relational database management systems">comparison</a></dd>
+</dl>
+</dd>
+<dd><a href="/wiki/List_of_relational_database_management_systems" title="List of relational database management systems">Relational</a>
+<dl>
+<dd><a href="/wiki/Comparison_of_relational_database_management_systems" title="Comparison of relational database management systems">comparison</a></dd>
+</dl>
+</dd>
+<dd><a href="/wiki/Document-oriented_database" title="Document-oriented database">Document-oriented</a></dd>
+<dd><a href="/wiki/NewSQL" title="NewSQL">NewSQL</a></dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p><span id="interwiki-de-ga"></span></p>
+
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 3285/1000000
+Preprocessor generated node count: 24106/1500000
+Post-expand include size: 51708/2048000 bytes
+Template argument size: 19277/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:8640-0!*!0!!en!4!* and timestamp 20121119130623 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Database_normalization&amp;oldid=523841318">http://en.wikipedia.org/w/index.php?title=Database_normalization&amp;oldid=523841318</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Database_normalization" title="Category:Database normalization">Database normalization</a></li><li><a href="/wiki/Category:Database_management_systems" title="Category:Database management systems">Database management systems</a></li><li><a href="/wiki/Category:Data_modeling" title="Category:Data modeling">Data modeling</a></li><li><a href="/wiki/Category:Database_constraints" title="Category:Database constraints">Database constraints</a></li><li><a href="/wiki/Category:Relational_algebra" title="Category:Relational algebra">Relational algebra</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Database+normalization&amp;type=signup">Create account</a></li>
+		<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Database+normalization" title="You are encouraged to log in; however, it is not mandatory. [o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Database_normalization"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Database_normalization"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Database_normalization" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Database_normalization&amp;action=edit"  title="You can edit this page. &#10;Please use the preview button before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Database_normalization&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" />						<button name="button" title="Search Wikipedia for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.21wmf3/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C12_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- interaction -->
+<div class="portal" id='p-interaction'>
+	<h5>Interaction</h5>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contact"><a href="/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /interaction -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Database_normalization" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Database_normalization" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Database_normalization&amp;oldid=523841318" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Database_normalization&amp;action=info">Page information</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Database_normalization&amp;id=523841318" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- coll-print_export -->
+<div class="portal" id='p-coll-print_export'>
+	<h5>Print/export</h5>
+	<div class="body">
+		<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Database+normalization" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Database+normalization&amp;oldid=523841318&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Database_normalization&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>	</div>
+</div>
+
+<!-- /coll-print_export -->
+
+<!-- LANGUAGES -->
+<div class="portal" id='p-lang'>
+	<h5>Languages</h5>
+	<div class="body">
+		<ul>
+			<li class="interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%AA%D8%B3%D9%88%D9%8A%D8%A9_%D9%82%D8%A7%D8%B9%D8%AF%D8%A9_%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA" title="تسوية قاعدة البيانات" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interwiki-cs"><a href="//cs.wikipedia.org/wiki/Normalizace_datab%C3%A1ze" title="Normalizace databáze" lang="cs" hreflang="cs">Česky</a></li>
+			<li class="interwiki-de"><a href="//de.wikipedia.org/wiki/Normalisierung_(Datenbank)" title="Normalisierung (Datenbank)" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interwiki-es"><a href="//es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos" title="Normalización de bases de datos" lang="es" hreflang="es">Español</a></li>
+			<li class="interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D9%86%D8%B1%D9%85%D8%A7%D9%84%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%D9%BE%D8%A7%DB%8C%DA%AF%D8%A7%D9%87_%D8%AF%D8%A7%D8%AF%D9%87%E2%80%8C%D9%87%D8%A7" title="نرمال‌سازی پایگاه داده‌ها" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interwiki-fr"><a href="//fr.wikipedia.org/wiki/Forme_normale_(bases_de_donn%C3%A9es_relationnelles)" title="Forme normale (bases de données relationnelles)" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interwiki-ko"><a href="//ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EC%A0%95%EA%B7%9C%ED%99%94" title="데이터베이스 정규화" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interwiki-it"><a href="//it.wikipedia.org/wiki/Normalizzazione_(informatica)" title="Normalizzazione (informatica)" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%A0%D7%99%D7%A8%D7%9E%D7%95%D7%9C_%D7%91%D7%A1%D7%99%D7%A1_%D7%A0%D7%AA%D7%95%D7%A0%D7%99%D7%9D" title="נירמול בסיס נתונים" lang="he" hreflang="he">עברית</a></li>
+			<li class="interwiki-mk"><a href="//mk.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%98%D0%B0_%D0%BD%D0%B0_%D0%B1%D0%B0%D0%B7%D0%B8_%D0%BD%D0%B0_%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D1%86%D0%B8" title="Нормализација на бази на податоци" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interwiki-nl"><a href="//nl.wikipedia.org/wiki/Databasenormalisatie" title="Databasenormalisatie" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E6%AD%A3%E8%A6%8F%E5%8C%96" title="リレーションの正規化" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interwiki-no"><a href="//no.wikipedia.org/wiki/Normalisering" title="Normalisering" lang="no" hreflang="no">Norsk (bokmål)‎</a></li>
+			<li class="interwiki-pl"><a href="//pl.wikipedia.org/wiki/Normalizacja_bazy_danych" title="Normalizacja bazy danych" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interwiki-pt"><a href="//pt.wikipedia.org/wiki/Normaliza%C3%A7%C3%A3o_de_dados" title="Normalização de dados" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interwiki-ru"><a href="//ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0" title="Нормальная форма" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interwiki-simple"><a href="//simple.wikipedia.org/wiki/Database_normalisation" title="Database normalisation" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interwiki-sk"><a href="//sk.wikipedia.org/wiki/Normaliz%C3%A1cia_(datab%C3%A1zy)" title="Normalizácia (databázy)" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interwiki-sr"><a href="//sr.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%98%D0%B0_%D0%B1%D0%B0%D0%B7%D0%B0_%D0%BF%D0%BE%D0%B4%D0%B0%D1%82%D0%B0%D0%BA%D0%B0" title="Нормализација база података" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interwiki-fi"><a href="//fi.wikipedia.org/wiki/Tietokannan_normalisointi" title="Tietokannan normalisointi" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interwiki-sv"><a href="//sv.wikipedia.org/wiki/Normalform_(databaser)" title="Normalform (databaser)" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interwiki-ta"><a href="//ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%B0%E0%AE%B5%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%B3_%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D" title="தரவுத்தள இயல்பாக்கம்" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interwiki-tr"><a href="//tr.wikipedia.org/wiki/Normalizasyon" title="Normalizasyon" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%8F_%D0%B1%D0%B0%D0%B7_%D0%B4%D0%B0%D0%BD%D0%B8%D1%85" title="Нормалізація баз даних" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interwiki-ur"><a href="//ur.wikipedia.org/wiki/%D9%82%D8%A7%D8%B9%D8%AF%DB%81_%D9%85%D8%B9%D8%B7%DB%8C%D8%A7%D8%AA_%D9%85%D8%B9%D9%85%D9%88%D9%84%D8%B3%D8%A7%D8%B2%DB%8C" title="قاعدہ معطیات معمولسازی" lang="ur" hreflang="ur">اردو</a></li>
+			<li class="interwiki-vi"><a href="//vi.wikipedia.org/wiki/Chu%E1%BA%A9n_h%C3%B3a_d%E1%BB%AF_li%E1%BB%87u" title="Chuẩn hóa dữ liệu" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%84%E8%8C%83%E5%8C%96" title="数据库规范化" lang="zh" hreflang="zh">中文</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 November 2012 at 13:06.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.
+See <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.<br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.<br /></li><li class="noprint"><a class='internal' href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact us</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Database_normalization&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.21wmf3/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.editWarning","ext.UserBuckets","ext.articleFeedback.startup","ext.articleFeedbackv5.startup","ext.markAsHelpful","ext.Experiments.lib","ext.Experiments.experiments","mw.PopUpMediaTransform"], null, true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-ReferenceTooltips.js&amp;action=raw&amp;ctype=text/javascript&amp;508635914"></script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by srv270 in 0.130 secs. -->
+	</body>
+</html>
